@@ -25,14 +25,14 @@ class Auth implements AuthInterface
     /**
      * Authenticate username and password
      *
-     * @param  string $hash
      * @param  string $password
+     * @param  string $hash
      *
      * @return bool
      */
-    public function authenticate(string $hash, string $password) : bool
+    public function authenticate(string $password, string $hash) : bool
     {
-        return $this->security->verifyPassword($hash, $password);
+        return $this->security->verifyPassword($password, $hash);
     }
 
 
