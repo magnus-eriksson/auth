@@ -46,7 +46,7 @@ class Security implements SecurityInterface
         return password_hash(
             $password,
             $this->password['algorithm'],
-            $this->password['cost']
+            ['cost' => $this->password['cost']]
         );
     }
 
