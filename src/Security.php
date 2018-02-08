@@ -57,9 +57,9 @@ class Security implements SecurityInterface
      * @param  string $password
      * @param  string $hash
      *
-     * @return boolean
+     * @return bool
      */
-    public function verifyPassword(string $password, string $hash) : string
+    public function verifyPassword(string $password, string $hash) : bool
     {
         return password_verify($password, $hash);
     }

@@ -36,7 +36,7 @@ interface SecurityInterface
      *
      * @return boolean
      */
-    public function verifyPassword(string $password, string $hash) : string;
+    public function verifyPassword(string $password, string $hash) : bool;
 
 
     /**
